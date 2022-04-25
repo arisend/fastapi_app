@@ -1,5 +1,3 @@
-# This is a sample Python script.
-
 from typing import Optional
 from collections import Counter
 import random
