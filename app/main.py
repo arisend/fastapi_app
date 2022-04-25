@@ -44,7 +44,7 @@ async def create_item():
                 INSERT INTO devices(dev_id, dev_type) VALUES($1, $2) RETURNING id
             ''', dev_id, dev_type,  column=0)
             await conn.execute('''
-                        INSERT INTO endpoints (device_id, comment) VALUES($1, $2) RETURNING id
+                        INSERT INTO endpoints (device_id, comment) VALUES($1, $2)
                     ''', id, random.choice("abcde"))
     r.close()
     await conn.close()
